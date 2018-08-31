@@ -1,0 +1,11 @@
+.idea/
+DeviceManagement.services/Application/bin
+DeviceManagement.services/Application/obj
+DeviceManagement.services/Infrastructure/bin
+DeviceManagement.services/Infrastructure/obj
+DeviceManagement.services/Presentation/obj
+DeviceManagement.services/Presentation/bin
+DeviceManagement.services/Docker/
+DeviceManagement.services/DataAccess/bin
+DeviceManagement.services/DataAccess/obj
+

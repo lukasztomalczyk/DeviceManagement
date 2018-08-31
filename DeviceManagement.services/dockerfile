@@ -1,0 +1,14 @@
+FROM microsoft/dotnet:2.1-sdk AS builder
+EXPOSE 5080/tcp
+COPY . /Docker
+ENV ASPNETCORE_ENVIRONMENT=Development
+
+WORKDIR /Docker/Presentation
+
+RUN dotnet publish -c Release -o ./app
+
+FROM microsoft/dotnet:2.1-aspnetcore-runtime AS runtime
+COPY --from=builder /Docker/Presentation/app ./Docker
+EXPOSE 5080/tcp
+#WORKDIR Docker
+ENTRYPOINT ["dotnet", "./Docker/Presentation.dll"]
